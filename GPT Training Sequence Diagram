@@ -1,0 +1,12 @@
+title GPT Model Training
+
+Swiftkey Data Corpus->Data Preprocessing:sent the data for cleaning
+Data Preprocessing->Data Cleaning:Cleaning the data 
+note over Data Cleaning:Removing Special Characters , numbers and extra spaces from the text
+Data Cleaning->Train Test Splitter : Sent for splitting 
+Train Test Splitter -> Data Encoder : Train and Test Data Sent for encoding 
+note over Data Encoder : GPT-1 Tokenizer
+Data Encoder -> Data Collator : Encoder Data is sent
+note over Data Collator : Blocks of Data are generated from train and test
+Data Collator -> Pretrained Box: Generated data is sent for fine tuning and testing
+Pretrained Box -> Disk: Fine Tuned Model is saved on disk
