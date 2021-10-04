@@ -1,0 +1,38 @@
+title MARKOV Model
+
+
+User->Keyboard: Types the words 
+Keyboard->Markov Model Predictor:Sends the typed words
+Markov Model Predictor->Unigram Dictionary:Sends the typed Words 
+Note left of Unigram Dictionary:only if len(I/P Sequence = 1)
+
+
+Markov Model Predictor->Bigram Dictionary:Sends the typed Words 
+Note left of Bigram Dictionary:only if len(I/P Sequence = 2) 
+Markov Model Predictor->Trigram Dictionary:Sends the typed Words 
+Note left of Trigram Dictionary:only if len(I/P Sequence >= 3)
+Trigram Dictionary-> Bigram Dictionary:only last 2 words of the sequence 
+Note left of Trigram Dictionary:if the whole sequence is not found
+
+
+Bigram Dictionary->Unigram Dictionary:only last 1 word of the sequence 
+Note left of Bigram Dictionary:if the whole sequence is not found
+
+
+Unigram Dictionary->Markov Model Predictor:random word  
+Note left of Unigram Dictionary:if the word is not found
+
+
+Note left of Trigram Dictionary:If the input sequences are found as key
+Trigram Dictionary-> Markov Model Predictor : send the value with highest probability corresponding to the sequence
+Note left of Bigram Dictionary:If the input sequences are found as key
+Bigram Dictionary-> Markov Model Predictor : send the value with highest probability corresponding to the sequence
+Note left of Unigram Dictionary:If the input word is found as key
+Unigram Dictionary-> Markov Model Predictor : send the value with highest probability corresponding to the word
+Markov Model Predictor -> Keyboard : Sends the predicted value as the next word .
+Keyboard -> User : Displays the next word predicted
+
+
+
+
+
