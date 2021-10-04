@@ -1,0 +1,11 @@
+title GPT Model 
+
+User->Keyboard: Types the words 
+Keyboard->GPT Model Predictor:Sends the typed words
+note left of GPT Model Predictor:Greedy Search-  Returns the word with highest probability that comes after the sequence
+GPT Model Predictor->Keyboard:word 1 
+note left of GPT Model Predictor:Beam Search- Returns the high probability next word from n hypothesis
+GPT Model Predictor->Keyboard:word 2 
+note left of GPT Model Predictor:Random Sample-chooses random next word from possible hypothesis
+GPT Model Predictor->Keyboard:word 3
+Keyboard->User:Displays the 3 words predicted 
